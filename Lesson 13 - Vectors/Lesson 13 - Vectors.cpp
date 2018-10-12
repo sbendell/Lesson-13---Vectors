@@ -9,19 +9,19 @@ using namespace std;
 
 int main()
 {
-	vector<ArmedEnemy> aevector;
+	vector<ArmedEnemy*> aevector;
 
-	ArmedEnemy ae1(100, 20);
-	ArmedEnemy ae2(90, 20);
-	ArmedEnemy ae3(80, 20);
-	ArmedEnemy ae4(70, 20);
-	ArmedEnemy ae5(60, 20);
-	ArmedEnemy ae6(50, 20);
-	ArmedEnemy ae7(40, 20);
-	ArmedEnemy ae8(30, 20);
-	ArmedEnemy ae9(20, 20);
-	ArmedEnemy ae10(10, 20);
-
+	ArmedEnemy* ae1 = new ArmedEnemy(100, 20);
+	ArmedEnemy* ae2 = new ArmedEnemy(90, 20);
+	ArmedEnemy* ae3 = new ArmedEnemy(80, 20);
+	ArmedEnemy* ae4 = new ArmedEnemy(70, 20);
+	ArmedEnemy* ae5 = new ArmedEnemy(60, 20);
+	ArmedEnemy* ae6 = new ArmedEnemy(50, 20);
+	ArmedEnemy* ae7 = new ArmedEnemy(40, 20);
+	ArmedEnemy* ae8 = new ArmedEnemy(30, 20);
+	ArmedEnemy* ae9 = new ArmedEnemy(20, 20);
+	ArmedEnemy* ae10 = new ArmedEnemy(10, 20);
+	
 	aevector.push_back(ae1);
 	aevector.push_back(ae2);
 	aevector.push_back(ae3);
@@ -32,6 +32,14 @@ int main()
 	aevector.push_back(ae8);
 	aevector.push_back(ae9);
 	aevector.push_back(ae10);
+
+	for (int i = 0; i < aevector.size(); i++)
+	{
+		cout << *aevector[i];
+	}
+
+	int x;
+	cin >> x;
 
     return 0;
 }
