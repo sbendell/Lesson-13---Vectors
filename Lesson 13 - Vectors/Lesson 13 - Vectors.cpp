@@ -4,12 +4,16 @@
 #include "stdafx.h"
 #include "ArmedEnemy.h"
 #include "vector"
+#include "stack"
+#include "Queue"
 
 using namespace std;
 
 int main()
 {
 	vector<ArmedEnemy*> aevector;
+	stack<ArmedEnemy*> aestack;
+	queue<ArmedEnemy> aequeue;
 
 	ArmedEnemy* ae1 = new ArmedEnemy(100, 20);
 	ArmedEnemy* ae2 = new ArmedEnemy(90, 20);
