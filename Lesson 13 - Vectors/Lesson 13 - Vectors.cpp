@@ -22,6 +22,17 @@ int main()
 	ArmedEnemy ae9(20, 20);
 	ArmedEnemy ae10(10, 20);
 
+	aevector.push_back(ae1);
+	aevector.push_back(ae2);
+	aevector.push_back(ae3);
+	aevector.push_back(ae4);
+	aevector.push_back(ae5);
+	aevector.push_back(ae6);
+	aevector.push_back(ae7);
+	aevector.push_back(ae8);
+	aevector.push_back(ae9);
+	aevector.push_back(ae10);
+
     return 0;
 }
 
