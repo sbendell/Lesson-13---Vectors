@@ -4,12 +4,16 @@
 #include "stdafx.h"
 #include "ArmedEnemy.h"
 #include "vector"
+#include "stack"
+#include "Queue"
 
 using namespace std;
 
 int main()
 {
 	vector<ArmedEnemy*> aevector;
+	stack<ArmedEnemy*> aestack;
+	queue<ArmedEnemy*> aequeue;
 
 	ArmedEnemy* ae1 = new ArmedEnemy(100, 20);
 	ArmedEnemy* ae2 = new ArmedEnemy(90, 20);
@@ -33,9 +37,46 @@ int main()
 	aevector.push_back(ae9);
 	aevector.push_back(ae10);
 
+	aestack.push(ae1);
+	aestack.push(ae2);
+	aestack.push(ae3);
+	aestack.push(ae4);
+	aestack.push(ae5);
+	aestack.push(ae6);
+	aestack.push(ae7);
+	aestack.push(ae8);
+	aestack.push(ae9);
+	aestack.push(ae10);
+
+	aequeue.push(ae1);
+	aequeue.push(ae2);
+	aequeue.push(ae3);
+	aequeue.push(ae4);
+	aequeue.push(ae5);
+	aequeue.push(ae6);
+	aequeue.push(ae7);
+	aequeue.push(ae8);
+	aequeue.push(ae9);
+	aequeue.push(ae10);
+
+	cout << "Vector enemy HPs:\n";
 	for (int i = 0; i < aevector.size(); i++)
 	{
-		cout << *aevector[i];
+		cout << *aevector[i] << "\n";
+	}
+
+	cout << "\n\n\nStack enemy HPs:\n";
+	for (int i = 0; i < aevector.size(); i++)
+	{
+		cout << *aestack.top() << "\n";
+		aestack.pop();
+	}
+
+	cout << "\n\n\nQueue enemy HPs:\n";
+	for (int i = 0; i < aevector.size(); i++)
+	{
+		cout << *aequeue.front() << "\n";
+		aequeue.pop();
 	}
 
 	int x;
