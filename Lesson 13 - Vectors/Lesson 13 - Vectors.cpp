@@ -9,6 +9,14 @@
 
 using namespace std;
 
+bool sortByAscendingHitPoints(ArmedEnemy* a, ArmedEnemy* b) {
+	return a->get_hit_points() < b->get_hit_points();
+}
+
+bool sortByDescendingHitPoints(ArmedEnemy* a, ArmedEnemy* b) {
+	return a->get_hit_points() > b->get_hit_points();
+}
+
 int main()
 {
 	vector<ArmedEnemy*> aevector;
@@ -37,7 +45,7 @@ int main()
 	aevector.push_back(ae9);
 	aevector.push_back(ae10);
 
-	aestack.push(ae1);
+	/*aestack.push(ae1);
 	aestack.push(ae2);
 	aestack.push(ae3);
 	aestack.push(ae4);
@@ -77,6 +85,30 @@ int main()
 	{
 		cout << *aequeue.front() << "\n";
 		aequeue.pop();
+	}*/
+
+	random_shuffle(aevector.begin(), aevector.end());
+
+	cout << "Vector enemy HPs after random shuffle:\n";
+	for (int i = 0; i < aevector.size(); i++)
+	{
+		cout << *aevector[i] << "\n";
+	}
+
+	sort(aevector.begin(), aevector.end(), sortByAscendingHitPoints);
+
+	cout << "Vector enemy HPs after ascending sort:\n";
+	for (int i = 0; i < aevector.size(); i++)
+	{
+		cout << *aevector[i] << "\n";
+	}
+
+	sort(aevector.begin(), aevector.end(), sortByDescendingHitPoints);
+
+	cout << "Vector enemy HPs after descending sort:\n";
+	for (int i = 0; i < aevector.size(); i++)
+	{
+		cout << *aevector[i] << "\n";
 	}
 
 	int x;
