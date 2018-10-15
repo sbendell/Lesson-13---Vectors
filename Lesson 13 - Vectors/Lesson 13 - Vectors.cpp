@@ -87,7 +87,7 @@ int main()
 		aequeue.pop();
 	}*/
 
-	random_shuffle(aevector.begin(), aevector.end());
+	/*random_shuffle(aevector.begin(), aevector.end());
 
 	cout << "Vector enemy HPs after random shuffle:\n";
 	for (int i = 0; i < aevector.size(); i++)
@@ -109,7 +109,9 @@ int main()
 	for (int i = 0; i < aevector.size(); i++)
 	{
 		cout << *aevector[i] << "\n";
-	}
+	}*/
+
+	cout << "Changed";
 
 	int x;
 	cin >> x;
